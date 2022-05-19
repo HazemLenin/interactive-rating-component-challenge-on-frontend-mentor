@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+// Primary colors
+$orange: #fb7413;
+
+// Neutral
+$white: #ffffff;
+$light-grey: #959eac;
+$medium-grey: #7c8798;
+$dark-blue: #252d37;
+$very-dark-blue: #121417;
+$icon-background: rgba(18, 20, 23, .5);
+
+// sizes
+$box-size: 350px;
+$rate-input-size: 50px;
+
+
+body {
+    margin: 0;
+    padding: 0;
+    background: $very-dark-blue;
+    height: 100vh;
+    width: 100vw;
+    color: $white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+    flex-direction: column;
+}
+
+* {
+    font-family: 'Overpass', sans-serif;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.wrapper {
+    background: transparent;
+    width: $box-size;
+    perspective: 1000px;
+
+    &.flipped .box {
+        transform: rotateY(180deg);
+    }
+}
+
+.box {
+    width: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+
+    &.error {
+        animation: refuse .7s;
+    }
+
+    .star {
+        width: $rate-input-size;
+        height: $rate-input-size;
+        background: $icon-background;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 25px;
+    }
+
+    p {
+        color: $light-grey;
+    }
+
+    .form-rate {
+        width: 100%;
+        height: 100%;
+
+        .form-rate__nav {
+            display: flex;
+            justify-content: space-between;
+            height: $rate-input-size;
+            .form-rate__nav__label {
+                input {
+                    display: none;
+                    &:checked ~ span {
+                        opacity: 1;
+                        background: $medium-grey;
+                    }
+                }
+    
+                span {
+                    width: $rate-input-size;
+                    height: $rate-input-size;
+                    background: $very-dark-blue;
+                    opacity: .5;
+                    text-align: center;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 25px;
+                    cursor: pointer;
+                    transition: all .2s;
+    
+                    &:hover {
+                        opacity: 1;
+                        background: $orange;
+                    }
+                }
+            }
+        }
+
+        .form-rate__btn {
+            width: 100%;
+            height: $rate-input-size;
+            background: $orange;
+            color: $white;
+            border: none;
+            outline: none;
+            border-radius: 30px;
+            text-transform: uppercase;
+            margin-top: 30px;
+            cursor: pointer;
+            transition: all .2s;
+
+            &:hover {
+                background: $white;
+                color: $orange;
+            }
+        }
+    }
+
+    .thank-you {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        transform: rotateY(180deg);
+        margin-top: -117%;
+        
+        h1 {
+            margin: 0;
+        }
+
+        .you-selected {
+            background: $icon-background;
+            border-radius: 25px;
+            color: $orange;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-right: 10px;
+            padding-left: 10px;
+        }
+
+        p {
+            margin: 0;
+        }
+    }
+
+    .rating, .thank-you {
+        padding: 30px;
+        background: $dark-blue;
+        border-radius: 25px;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+}
+
+@keyframes refuse {
+    /*
+        1. center
+        2. right
+        3. left
+        4. right
+        5. center
+    */
+    0%, 100% { // center
+        transform: translateX(0);
+    }
+    25%, 75%{ // right
+        transform: translateX(20px);
+    }
+    50% { //left
+        transform: translateX(-20px);
+    }
+}
