@@ -32,8 +32,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Add solution URL here](https://www.frontendmentor.io/solutions/interactive-rating-component-solution-_pUQfWvTwq)
+- Live Site URL: [Add live site URL here](https://hazemlenin.github.io/interactive-rating-component-challenge-on-frontend-mentor/)
 
 ## My process
 
@@ -42,6 +42,7 @@ Users should be able to:
 - Semantic HTML5 markup
 - Flexbox
 - SASS (CSS preprocessor)
+- Javascript
 
 ### What I learned
 
