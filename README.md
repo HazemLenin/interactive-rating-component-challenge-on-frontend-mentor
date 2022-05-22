@@ -32,7 +32,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution](https://www.frontendmentor.io/solutions/interactive-rating-component-solution-_pUQfWvTwq)
+- Solution URL: [Github](https://www.frontendmentor.io/solutions/interactive-rating-component-solution-_pUQfWvTwq)
 - Live Site URL: [Github Pages](https://hazemlenin.github.io/interactive-rating-component-challenge-on-frontend-mentor/)
 
 ## My process
@@ -109,5 +109,5 @@ It was my first time to make error animation!
 
 ## Author
 
-- Website - [HazemLenin.github.io](https://HazemLenin.github.io)
+- Website - [Hazem Lenin](https://HazemLenin.github.io)
 - Frontend Mentor - [@HazemLenin](https://www.frontendmentor.io/profile/HazemLenin)
